@@ -6,8 +6,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@AllArgsConstructor
+import java.util.List;
+
+
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 public class ArticleDto {

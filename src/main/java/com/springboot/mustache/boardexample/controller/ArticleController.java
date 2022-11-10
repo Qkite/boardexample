@@ -86,12 +86,15 @@ public class ArticleController {
         return "list";
     }
 
-    @PostMapping("list/{id}/update")
+    @PostMapping("/list/{id}/update")
     public String editContent(@PathVariable Long id, ArticleDto articleDto, Model model){
         Article article = articleRepository.save(articleDto.toEntity(id));
         model.addAttribute("article", article);
-        return "list";
+        return "redirect:/sample-board/list";
     }
+
+
+
 
 
 }
