@@ -1,1 +1,19 @@
+server:
+  servlet:
+    encoding:
+      force-response: true
 
+spring:
+  datasource :
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: url
+    username: root
+    password: password
+
+
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+    database: mysql
+    hibernate.ddl-auto: update
