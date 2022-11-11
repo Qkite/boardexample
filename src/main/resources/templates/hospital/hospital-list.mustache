@@ -1,0 +1,79 @@
+{{>layouts/header}}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">id</th>
+        <th scope="col">hospital name</th>
+        <th scope="col">business type</th>
+        <th scope="col">address</th>
+        <th scope="col">number of healthcare provider</th>
+        <th scope="col">number of patient room</th>
+        <th scope="col">number of beds</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {{#hospitals}}
+
+        <tr>
+            {{#id}}
+                <th scope="row">{{id}}</th>
+            {{/id}}
+            {{^id}}
+                <th scope="row">unknown</th>
+            {{/id}}
+
+            {{#hospitalName}}
+                <td>{{hospitalName}}</td>
+            {{/hospitalName}}
+            {{^hospitalName}}
+                <th scope="row">unknown</th>
+            {{/hospitalName}}
+
+            {{#businessTypeName}}
+                <td >{{businessTypeName}}</td>
+            {{/businessTypeName}}
+            {{^businessTypeName}}
+                <th scope="row">unknown</th>
+            {{/businessTypeName}}
+
+            {{#roadNameAddress}}
+                <td >{{roadNameAddress}}</td>
+            {{/roadNameAddress}}
+            {{^roadNameAddress}}
+                <th scope="row">unknown</th>
+            {{/roadNameAddress}}
+
+            {{#healthcareProviderCount}}
+                <td >{{healthcareProviderCount}}</td>
+            {{/healthcareProviderCount}}
+            {{^healthcareProviderCount}}
+                <th scope="row">unknown</th>
+            {{/healthcareProviderCount}}
+
+            {{#patientRoomCount}}
+                <td >{{patientRoomCount}}</td>
+            {{/patientRoomCount}}
+            {{^patientRoomCount}}
+                <th scope="row">unknown</th>
+            {{/patientRoomCount}}
+
+            {{#totalNumberOfBeds}}
+                <td >{{totalNumberOfBeds}}</td>
+            {{/totalNumberOfBeds}}
+            {{^totalNumberOfBeds}}
+                <th scope="row">unknown</th>
+            {{/totalNumberOfBeds}}
+
+        </tr>
+    {{/hospitals}}
+
+
+</table>
+<a href = "/hospital/write" class="btn btn-primary" role="button">글 작성하기</a>
+
+
+
+
+{{>layouts/footer}}
